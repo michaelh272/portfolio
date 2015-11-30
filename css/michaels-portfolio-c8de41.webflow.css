@@ -1,0 +1,296 @@
+p {
+  margin-top: -9px;
+  margin-bottom: 10px;
+}
+
+.nav-bar-center {
+  display: block;
+  float: none;
+  text-align: center;
+}
+
+.nav-text {
+  display: inline-block;
+  float: none;
+  clear: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+}
+
+.cover-photo {
+  position: static;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  height: 582px;
+  float: none;
+  clear: none;
+  text-align: center;
+}
+
+.background {
+  position: relative;
+  height: 612px;
+  background-image: url('../images/Shaded image.png');
+  background-position: 0px 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.about {
+  height: 478px;
+  background-color: #e4e4e4;
+}
+
+.about.about-container {
+  padding-top: 78px;
+  padding-bottom: 48px;
+}
+
+.about-text {
+  padding-right: 432px;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.about-text-div {
+  height: 242px;
+  padding-right: 338px;
+  padding-bottom: 0px;
+  font-size: 30px;
+}
+
+.about-pic {
+  display: block;
+  width: auto;
+  min-height: 250px;
+  min-width: 250px;
+  margin-right: 14px;
+  margin-left: 24px;
+  padding: 15px;
+  float: right;
+  text-align: right;
+}
+
+.work-div {
+  height: auto;
+  padding-top: 8px;
+  padding-bottom: 67px;
+  background-color: white;
+}
+
+.work-header-text {
+  margin-top: 28px;
+  padding-top: 31px;
+  font-family: Merriweather, serif;
+  text-align: center;
+}
+
+.contact-section {
+  height: auto;
+  background-color: #e4e4e4;
+}
+
+.contact-form {
+  display: block;
+  width: 266px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  padding-top: 45px;
+  padding-bottom: 48px;
+  float: none;
+  direction: ltr;
+  text-align: left;
+}
+
+.get-in-touch-text {
+  padding-top: 30px;
+  padding-bottom: 14px;
+  font-size: 25px;
+}
+
+.feild-label {
+  font-size: 15px;
+}
+
+.contact-message-box {
+  width: 365px;
+  height: 143px;
+}
+
+.background-pic {
+  width: 1554px;
+  height: 520px;
+}
+
+.work-item {
+  height: 416px;
+}
+
+.work-container {
+  display: block;
+  margin: 18px auto 34px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  text-align: center;
+}
+
+.about-me-text {
+  max-height: 230px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 25px;
+  line-height: 36px;
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  column-count: 1;
+}
+
+.hi {
+  margin-top: 49px;
+  font-family: Merriweather, serif;
+}
+
+.quote {
+  position: relative;
+  left: 0px;
+  bottom: 0px;
+  z-index: auto;
+  overflow-x: auto;
+  overflow-y: auto;
+  width: 478px;
+  height: auto;
+  margin-top: 238px;
+  margin-right: 44px;
+  margin-left: 34px;
+  padding: 0px 0px 0px 19px;
+  float: right;
+  clear: none;
+  font-family: Merriweather, serif;
+  color: white;
+  font-size: 37px;
+  line-height: 53px;
+}
+
+.quote-text {
+  display: block;
+  max-width: 375px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 65px;
+  float: none;
+  clear: none;
+  font-family: Merriweather, serif;
+  color: white;
+  font-size: 44px;
+  line-height: 64px;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+.work-icon {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 10px auto;
+  padding: 10px;
+  clear: both;
+}
+
+.mass-image {
+  max-width: 90%;
+}
+
+.mass-body {
+  margin-top: 22px;
+  margin-left: 18px;
+  background-color: #464646;
+}
+
+.section-top-cover {
+  min-height: 200px;
+  min-width: 200px;
+  background-image: url('../images/postIt-pile.jpg');
+  background-position: 100% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.image1 {
+  margin-right: 29px;
+  margin-bottom: 60px;
+  padding-right: 32px;
+  float: right;
+}
+
+.photo2 {
+  margin-top: 9px;
+  margin-bottom: 14px;
+  margin-left: 60px;
+  padding-right: 21px;
+  padding-left: 17px;
+  float: left;
+}
+
+.section-cover {
+  min-height: 400px;
+  padding-bottom: 0px;
+  background-image: url('../images/photo 1 (1).JPG');
+  background-position: 100% 0%;
+  background-size: 1632px;
+}
+
+._4plan-pic {
+  margin-top: 20px;
+  margin-left: 19px;
+  border: 3px solid #919191;
+}
+
+.subtitle {
+  margin-top: -14px;
+  padding-top: 0px;
+}
+
+.descriptor {
+  margin-top: 13px;
+  padding-top: 0px;
+}
+
+.story {
+  margin-top: 17px;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  clear: both;
+  background-color: white;
+  background-image: -webkit-linear-gradient(white 41%, #ebe9e9);
+  background-image: linear-gradient(white 41%, #ebe9e9);
+}
+
+.footer {
+  background-color: #292929;
+}
+
+.footer-text {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-family: Merriweather, serif;
+  color: #f3f3f3;
+}
+
+.footer-text.footer-small-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11px;
+}
+
+.footer-big-text {
+  float: left;
+  font-size: 14px;
+}
