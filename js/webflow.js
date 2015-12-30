@@ -547,11 +547,11 @@
 
 	Webflow.define('dropdown', module.exports = function($, _) {
 	  var api = {};
-	  var tram = $.tram;
 	  var $doc = $(document);
 	  var $dropdowns;
 	  var designer;
 	  var inApp = Webflow.env();
+	  var touch = Webflow.env.touch;
 	  var namespace = '.w-dropdown';
 	  var stateOpen = 'w--open';
 	  var closeEvent = 'w-close' + namespace;
@@ -584,6 +584,7 @@
 	    data.links = data.list.children('.w-dropdown-link');
 	    data.outside = outside(data);
 	    data.complete = complete(data);
+	    data.leave = leave(data);
 
 	    // Remove old events
 	    $el.off(namespace);
@@ -601,6 +602,9 @@
 	      $el.on('setting' + namespace, handler(data));
 	    } else {
 	      data.toggle.on('tap' + namespace, toggle(data));
+	      if (data.config.hover) {
+	        data.toggle.on('mouseenter' + namespace, enter(data));
+	      }
 	      $el.on(closeEvent, handler(data));
 	      // Close in preview mode
 	      inApp && close(data);
@@ -609,8 +613,8 @@
 
 	  function configure(data) {
 	    data.config = {
-	      hover: +data.el.attr('data-hover'),
-	      delay: +data.el.attr('data-delay') || 0
+	      hover: Boolean(data.el.attr('data-hover')) && !touch,
+	      delay: Number(data.el.attr('data-delay')) || 0
 	    };
 	  }
 
@@ -632,12 +636,12 @@
 	  }
 
 	  function toggle(data) {
-	    return _.debounce(function(evt) {
+	    return _.debounce(function() {
 	      data.open ? close(data) : open(data);
 	    });
 	  }
 
-	  function open(data, immediate) {
+	  function open(data) {
 	    if (data.open) return;
 	    closeOthers(data);
 	    data.open = true;
@@ -648,6 +652,7 @@
 
 	    // Listen for tap outside events
 	    if (!designer) $doc.on('tap' + namespace, data.outside);
+	    if (data.hovering) data.el.on('mouseleave' + namespace, data.leave);
 
 	    // Clear previous delay
 	    window.clearTimeout(data.delayId);
@@ -655,12 +660,17 @@
 
 	  function close(data, immediate) {
 	    if (!data.open) return;
+
+	    // Do not close hover-based menus if currently hovering
+	    if (data.config.hover && data.hovering) return;
+
 	    data.open = false;
 	    var config = data.config;
 	    ix.outro(0, data.el[0]);
 
 	    // Stop listening for tap outside events
 	    $doc.off('tap' + namespace, data.outside);
+	    data.el.off('mouseleave' + namespace, data.leave);
 
 	    // Clear previous delay
 	    window.clearTimeout(data.delayId);
@@ -703,6 +713,20 @@
 	    };
 	  }
 
+	  function enter(data) {
+	    return function() {
+	      data.hovering = true;
+	      open(data);
+	    };
+	  }
+
+	  function leave(data) {
+	    return function() {
+	      data.hovering = false;
+	      close(data);
+	    };
+	  }
+
 	  // Export module
 	  return api;
 	});
@@ -733,6 +757,7 @@
 
 	  var api = {};
 	  var $win = $(window);
+	  var $html = $(document.documentElement);
 	  var location = document.location;
 	  var hashchange = 'hashchange';
 	  var loaded;
@@ -766,6 +791,7 @@
 	    $win.off(hashchange, checkHash);
 	    $.ajax({
 	      url: cleanSlashes(("https://editor-api.webflow.com") + '/api/editor/view'),
+	      data: { siteId: $html.attr('data-wf-site') },
 	      xhrFields: { withCredentials: true },
 	      dataType: 'json',
 	      crossDomain: true,
@@ -1141,6 +1167,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
+	/*eslint no-self-compare:0 */
 
 	/**
 	 * Webflow: Interactions
@@ -1323,11 +1350,11 @@
 
 	  function convert(offset) {
 	    if (!offset) return 0;
-	    offset = offset + '';
+	    offset = String(offset);
 	    var result = parseInt(offset, 10);
 	    if (result !== result) return 0;
 	    if (offset.indexOf('%') > 0) {
-	      result = result / 100;
+	      result /= 100;
 	      if (result >= 1) result = 0.999;
 	    }
 	    return result;
@@ -1397,16 +1424,21 @@
 	      // Find selector within element descendants, siblings, or query whole document
 	      var selector = trigger.selector;
 	      if (selector) {
-	        $el = (
-	          trigger.descend ? $el.find(selector) :
-	          trigger.siblings ? $el.siblings(selector) :
-	          $(selector)
-	        );
+	        if (trigger.descend) {
+	          $el = $el.find(selector);
+	        } else if (trigger.siblings) {
+	          $el = $el.siblings(selector);
+	        } else {
+	          $el = $(selector);
+	        }
 	        if (inApp) $el.attr('data-ix-affect', 1);
 	      }
 
 	      // Apply empty fix for certain Chrome versions
 	      if (emptyFix) $el.addClass('w-ix-emptyfix');
+
+	      // Set preserve3d for triggers with transforms
+	      if (trigger.preserve3d) $el.css('transform-style', 'preserve-3d');
 	    }
 
 	    var _tram = tram($el);
@@ -4312,4 +4344,24 @@
 	module.exports=function($){if($.support.cors||!$.ajaxTransport||!window.XDomainRequest){return}var httpRegEx=/^https?:\/\//i;var getOrPostRegEx=/^get|post$/i;var sameSchemeRegEx=new RegExp("^"+location.protocol,"i");$.ajaxTransport("* text html xml json",function(options,userOptions,jqXHR){if(!options.crossDomain||!options.async||!getOrPostRegEx.test(options.type)||!httpRegEx.test(options.url)||!sameSchemeRegEx.test(options.url)){return}var xdr=null;return{send:function(headers,complete){var postData="";var userType=(userOptions.dataType||"").toLowerCase();xdr=new XDomainRequest;if(/^\d+$/.test(userOptions.timeout)){xdr.timeout=userOptions.timeout}xdr.ontimeout=function(){complete(500,"timeout")};xdr.onload=function(){var allResponseHeaders="Content-Length: "+xdr.responseText.length+"\r\nContent-Type: "+xdr.contentType;var status={code:200,message:"success"};var responses={text:xdr.responseText};try{if(userType==="html"||/text\/html/i.test(xdr.contentType)){responses.html=xdr.responseText}else if(userType==="json"||userType!=="text"&&/\/json/i.test(xdr.contentType)){try{responses.json=$.parseJSON(xdr.responseText)}catch(e){status.code=500;status.message="parseerror"}}else if(userType==="xml"||userType!=="text"&&/\/xml/i.test(xdr.contentType)){var doc=new ActiveXObject("Microsoft.XMLDOM");doc.async=false;try{doc.loadXML(xdr.responseText)}catch(e){doc=undefined}if(!doc||!doc.documentElement||doc.getElementsByTagName("parsererror").length){status.code=500;status.message="parseerror";throw"Invalid XML: "+xdr.responseText}responses.xml=doc}}catch(parseMessage){throw parseMessage}finally{complete(status.code,status.message,responses,allResponseHeaders)}};xdr.onprogress=function(){};xdr.onerror=function(){complete(500,"error",{text:xdr.responseText})};if(userOptions.data){postData=$.type(userOptions.data)==="string"?userOptions.data:$.param(userOptions.data)}xdr.open(options.type,options.url);xdr.send(postData)},abort:function(){if(xdr){xdr.abort()}}}})}(window.jQuery);
 
 /***/ }
-/******/ ]);
+/******/ ]);/**
+ * ----------------------------------------------------------------------
+ * Webflow: Interactions: Init
+ */
+Webflow.require('ix').init([
+  {"slug":"fade-in","name":"Fade In","value":{"style":{"title":"Invisible","opacity":0},"triggers":[{"type":"load","stepsA":[{"title":"Wait","wait":100},{"opacity":1,"wait":2000,"transition":"opacity 2000ms ease-in-out 0ms, height 100ms ease-in-quad 0ms"}],"stepsB":[]}]}},
+  {"slug":"scroll-fade-in","name":"Scroll Fade In","value":{"style":{"opacity":0,"scaleX":0.8,"scaleY":0.8,"scaleZ":1},"triggers":[{"type":"scroll","offsetBot":"30%","stepsA":[{"wait":100},{"opacity":1,"wait":500,"transition":"transform 500ms ease 0ms, opacity 500ms ease-in-out 0ms","scaleX":1.01,"scaleY":1.01,"scaleZ":1},{"wait":500,"transition":"transform 500ms ease 0ms","scaleX":1,"scaleY":1,"scaleZ":1}],"stepsB":[]}]}},
+  {"slug":"enlarge","name":"Enlarge","value":{"style":{},"triggers":[{"type":"hover","stepsA":[{"title":"Resize","wait":300,"transition":"transform 500ms ease-in-out 0ms","scaleX":1.05,"scaleY":1.05,"scaleZ":1}],"stepsB":[{"title":"Smaller","wait":200,"transition":"transform 500ms ease-in-out 0ms","scaleX":1,"scaleY":1,"scaleZ":1}]}]}},
+  {"slug":"flip","name":"Flip","value":{"style":{},"triggers":[]}},
+  {"slug":"fade-in-2","name":"Fade In 2","value":{"style":{"title":"Invisible","opacity":0,"x":"-75px","y":"0px","z":"0px"},"triggers":[{"type":"load","stepsA":[{"title":"Wait","wait":100},{"opacity":1,"wait":1500,"transition":"transform 1500ms ease 0ms, opacity 1500ms ease-in-out 0ms, height 100ms ease-in-quad 0ms","x":"0px","y":"0px","z":"0px"}],"stepsB":[]},{"type":"scroll","offsetTop":"80%","offsetBot":"20%","stepsA":[{"opacity":1,"transition":"opacity 1000ms ease-in-out 0ms"}],"stepsB":[{"opacity":0,"transition":"opacity 500ms ease 0ms"}]}]}},
+  {"slug":"pop-towards","name":"pop towards","value":{"style":{"opacity":0,"scaleX":0.8,"scaleY":0.8,"scaleZ":1},"triggers":[{"type":"scroll","offsetBot":"20%","stepsA":[{"title":"wait","wait":100},{"title":"pop towards","opacity":1,"transition":"transform 400ms ease 0ms, opacity 400ms ease 0ms","scaleX":1.04,"scaleY":1.04,"scaleZ":1},{"title":"Scale 1.0x","transition":"transform 500ms ease 0ms","scaleX":1,"scaleY":1,"scaleZ":1}],"stepsB":[]}]}},
+  {"slug":"pop-towards-delay1","name":"pop towards delay1","value":{"style":{"opacity":0,"scaleX":0.8,"scaleY":0.8,"scaleZ":1},"triggers":[{"type":"scroll","offsetBot":"20%","stepsA":[{"title":"wait","wait":200},{"title":"pop towards","opacity":1,"transition":"transform 400ms ease 0ms, opacity 400ms ease 0ms","scaleX":1.04,"scaleY":1.04,"scaleZ":1},{"title":"Scale 1.0x","transition":"transform 500ms ease 0ms","scaleX":1,"scaleY":1,"scaleZ":1}],"stepsB":[]}]}},
+  {"slug":"pop-towards-delay-2","name":"pop towards delay 2","value":{"style":{"opacity":0,"scaleX":0.8,"scaleY":0.8,"scaleZ":1},"triggers":[{"type":"scroll","offsetBot":"20%","stepsA":[{"title":"wait","wait":300},{"title":"pop towards","opacity":1,"transition":"transform 400ms ease 0ms, opacity 400ms ease 0ms","scaleX":1.04,"scaleY":1.04,"scaleZ":1},{"title":"Scale 1.0x","transition":"transform 500ms ease 0ms","scaleX":1,"scaleY":1,"scaleZ":1}],"stepsB":[]}]}},
+  {"slug":"pop-towards-delay-3","name":"pop towards delay 3","value":{"style":{"opacity":0,"scaleX":0.8,"scaleY":0.8,"scaleZ":1},"triggers":[{"type":"scroll","offsetBot":"20%","stepsA":[{"title":"wait","wait":400},{"title":"pop towards","opacity":1,"transition":"transform 400ms ease 0ms, opacity 400ms ease 0ms","scaleX":1.04,"scaleY":1.04,"scaleZ":1},{"title":"Scale 1.0x","transition":"transform 500ms ease 0ms","scaleX":1,"scaleY":1,"scaleZ":1}],"stepsB":[]}]}},
+  {"slug":"fade-in-3","name":"Fade In 3","value":{"style":{"title":"Invisible","opacity":0},"triggers":[{"type":"load","stepsA":[{"title":"Wait","wait":100},{"opacity":1,"wait":1500,"transition":"opacity 1500ms ease-in-out 0ms, height 100ms ease-in-quad 0ms"}],"stepsB":[]},{"type":"scroll","offsetTop":"80%","offsetBot":"20%","stepsA":[{"opacity":1,"transition":"opacity 1000ms ease-in-out 0ms"}],"stepsB":[{"opacity":0,"transition":"opacity 500ms ease 0ms"}]}]}},
+  {"slug":"pop-downwards","name":"Pop Downwards","value":{"style":{"opacity":0,"x":"0px","y":"-30px","z":"0px"},"triggers":[{"type":"scroll","offsetBot":"20%","stepsA":[{"opacity":1,"transition":"transform 500ms ease 0ms, opacity 600ms ease-in-out 0ms","x":"0px","y":"0px","z":"0px"}],"stepsB":[]}]}},
+  {"slug":"pop-downwards-2","name":"Pop Downwards 2","value":{"style":{"opacity":0,"x":"0px","y":"-30px","z":"0px"},"triggers":[{"type":"scroll","offsetBot":"20%","stepsA":[{"opacity":1,"transition":"transform 500ms ease 0ms, opacity 600ms ease-in-out 0ms","x":"0px","y":"0px","z":"0px"}],"stepsB":[]}]}},
+  {"slug":"pop-downwards-3","name":"Pop Downwards 3","value":{"style":{"opacity":0,"x":"0px","y":"50px","z":"0px"},"triggers":[{"type":"scroll","offsetBot":"15%","stepsA":[{"opacity":1,"transition":"transform 500ms ease 0ms, opacity 600ms ease-in-out 0ms","x":"0px","y":"0px","z":"0px"}],"stepsB":[]}]}},
+  {"slug":"pop-from-left","name":"Pop from left","value":{"style":{"opacity":0,"x":"-150px","y":"0px","z":"0px"},"triggers":[{"type":"load","stepsA":[{"opacity":1,"transition":"transform 1300ms ease 0ms, opacity 800ms ease-out 0ms","x":"0px","y":"0px","z":"0px"}],"stepsB":[]}]}},
+  {"slug":"pop-from-right","name":"Pop from right","value":{"style":{"opacity":0,"x":"150px","y":"0px","z":"0px"},"triggers":[{"type":"load","stepsA":[{"opacity":1,"transition":"transform 1300ms ease 0ms, opacity 800ms ease-out 0ms","x":"0px","y":"0px","z":"0px"}],"stepsB":[]}]}}
+]);
