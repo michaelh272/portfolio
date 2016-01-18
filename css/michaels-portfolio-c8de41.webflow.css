@@ -1,6 +1,18 @@
+h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
 p {
   margin-top: -9px;
   margin-bottom: 10px;
+}
+
+strong {
+  font-weight: 700;
 }
 
 .nav-bar-center {
@@ -22,23 +34,23 @@ p {
 }
 
 .nav-text:hover {
-  background-color: rgba(39, 92, 75, 0.26);
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .nav-text:focus {
   color: #2c6150;
 }
 
-.cover-photo {
-  position: static;
-  left: 0px;
-  top: 0px;
-  right: 0px;
-  height: 582px;
-  float: none;
-  clear: none;
-  text-align: center;
+.nav-text.w--current:hover {
+  font-weight: 700;
+}
+
+.nav-text.w--current:active {
+  background-color: rgba(39, 92, 75, 0.26);
+}
+
+.nav-text.w--current:focus {
+  color: #265b4a;
 }
 
 .background {
@@ -47,6 +59,7 @@ p {
   overflow-x: scroll;
   overflow-y: scroll;
   height: 600px;
+  background-color: #3a3a3a;
   background-image: url('../images/Shaded imageV2.png');
   background-position: 0px 0px;
   background-size: cover;
@@ -63,21 +76,13 @@ p {
 }
 
 .about.about-container {
+  height: auto;
   padding: 80px 50px;
-  box-shadow: none;
 }
 
-.about-text {
-  padding-right: 432px;
-  font-size: 32px;
-  font-weight: 400;
-}
-
-.about-text-div {
-  height: 242px;
-  padding-right: 338px;
-  padding-bottom: 0px;
-  font-size: 30px;
+.about.contact-section {
+  margin-top: 10px;
+  box-shadow: black 0px 1px 10px 0px;
 }
 
 .about-pic {
@@ -103,7 +108,7 @@ p {
 }
 
 .work-div.section {
-  box-shadow: rgba(8, 8, 8, 0.29) 0px -1px 10px 0px, rgba(8, 8, 8, 0.29) 0px 1px 10px 0px;
+  box-shadow: #1d1d1d 0px 1px 10px 0px;
   -webkit-perspective: 1300px;
   perspective: 1300px;
 }
@@ -128,6 +133,8 @@ p {
 
 .contact-section.contact-class2 {
   margin-top: 100px;
+  margin-bottom: 75px;
+  box-shadow: black 0px 1px 10px 0px;
 }
 
 .contact-form {
@@ -179,15 +186,6 @@ p {
   box-shadow: #265b4a 0px 0px 6px 2px;
 }
 
-.background-pic {
-  width: 1554px;
-  height: 520px;
-}
-
-.work-item {
-  height: 416px;
-}
-
 .work-container {
   display: block;
   margin: 18px auto 34px;
@@ -199,10 +197,11 @@ p {
 .about-me-text {
   max-height: 149px;
   max-width: 475px;
+  margin-top: 5px;
   margin-left: 0px;
   font-family: Roboto, sans-serif;
-  color: #585858;
-  font-size: 17px;
+  color: #333;
+  font-size: 18px;
   line-height: 28px;
   font-weight: 300;
   -webkit-column-count: 1;
@@ -212,6 +211,7 @@ p {
 
 .hi {
   margin-top: 0px;
+  margin-bottom: 10px;
   margin-left: 0px;
   font-family: Lato, sans-serif;
   color: #265b4a;
@@ -239,28 +239,12 @@ p {
   font-weight: 300;
 }
 
-.quote-text {
-  display: block;
-  max-width: 375px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-top: 65px;
-  float: none;
-  clear: none;
-  font-family: Merriweather, serif;
-  color: white;
-  font-size: 44px;
-  line-height: 64px;
-  font-weight: 400;
-  letter-spacing: -1px;
-}
-
 .work-icon {
   position: relative;
   display: inline-block;
   width: 220px;
   height: 220px;
-  margin: 10px auto;
+  margin: 10px auto 0px;
   padding: 10px;
   clear: both;
   -webkit-perspective-origin: 100% 100%;
@@ -308,30 +292,11 @@ p {
   float: left;
 }
 
-.section-cover {
-  min-height: 400px;
-  padding-bottom: 0px;
-  background-image: url('../images/photo 1 (1).JPG');
-  background-position: 100% 0%;
-  background-size: 1632px;
-}
-
-._4plan-pic {
-  margin-top: 20px;
-  margin-left: 19px;
-  border: 3px solid #919191;
-}
-
 .subtitle {
   margin-top: -14px;
   margin-bottom: 25px;
   padding-top: 0px;
   text-align: center;
-}
-
-.descriptor {
-  margin-top: 13px;
-  padding-top: 0px;
 }
 
 .story {
@@ -350,7 +315,7 @@ p {
 }
 
 .footer {
-  margin-top: 70px;
+  margin-top: 0px;
   background-color: #292929;
 }
 
@@ -396,6 +361,7 @@ p {
 .form {
   margin-top: 6px;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .get-in-touch {
@@ -412,13 +378,12 @@ p {
   text-align: center;
 }
 
-.resume {
-  margin-top: 44px;
-  margin-bottom: 45px;
-}
-
 .resume-link {
-  color: #585858;
+  margin-bottom: 10px;
+  font-family: Roboto, sans-serif;
+  color: #333;
+  font-size: 16px;
+  font-weight: 300;
   text-decoration: underline;
 }
 
@@ -434,6 +399,10 @@ p {
 .work-text-link:hover {
   color: #265b4a;
   font-weight: 400;
+}
+
+.work-text-link.w--current {
+  color: #333;
 }
 
 .challenge {
@@ -490,26 +459,18 @@ p {
 
 .like-icon {
   display: inline-block;
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-top: 5px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .likes {
+  margin-top: 5px;
   margin-bottom: 10px;
   font-family: Roboto, sans-serif;
   color: #585858;
   font-size: 17px;
-  font-weight: 700;
-}
-
-.work-label {
-  color: #585858;
-  text-align: center;
-  text-decoration: none;
-}
-
-.project-label {
-  text-decoration: none;
+  font-weight: 500;
 }
 
 .pic-div {
@@ -517,6 +478,7 @@ p {
   max-width: 300px;
   min-height: 300px;
   min-width: 300px;
+  margin-top: 15px;
   float: right;
   background-image: url('../images/Headshot Circle.png'), url('../images/B&W Photo of Me.png');
   background-position: 0px 0px, 0px 0px;
@@ -531,11 +493,6 @@ p {
   background-size: contain;
 }
 
-.message-field {
-  height: 150px;
-  border-radius: 2px;
-}
-
 .message-box.text-feild {
   font-family: Roboto, sans-serif;
   font-size: 13px;
@@ -543,7 +500,7 @@ p {
 
 .resume-image {
   min-width: 60%;
-  margin-top: 50px;
+  margin-top: 100px;
   margin-bottom: 50px;
   border: 1px solid #4e4e4e;
   box-shadow: #303030 1px 1px 3px 0px;
@@ -552,12 +509,36 @@ p {
 .top-image-section {
   height: 650px;
   min-height: 440px;
-  background-color: white;
+  background-color: black;
+  background-image: -webkit-radial-gradient(31% 53% circle, transparent 16%, rgba(0, 0, 0, 0.68) 49%, rgba(0, 0, 0, 0.84) 75%, rgba(0, 0, 0, 0.99) 99%), url('../images/MayimEventPicCover.jpg');
+  background-image: radial-gradient(circle at 31% 53%, transparent 16%, rgba(0, 0, 0, 0.68) 49%, rgba(0, 0, 0, 0.84) 75%, rgba(0, 0, 0, 0.99) 99%), url('../images/MayimEventPicCover.jpg');
+  background-position: 0px 0px, 0px 50px;
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
   font-family: Roboto, sans-serif;
 }
 
 .top-image-section:hover {
   font-family: Roboto, sans-serif;
+}
+
+.top-image-section._4-year {
+  height: auto;
+  background-color: white;
+  background-image: none;
+  background-position: 0px 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.top-image-section.mayim {
+  height: auto;
+}
+
+.top-image-section.codesketch {
+  height: auto;
+  background-color: white;
+  background-image: none;
 }
 
 .section1 {
@@ -566,29 +547,42 @@ p {
 }
 
 .section1.section06 {
-  height: 500px;
+  height: auto;
 }
 
 .section1._07 {
-  height: 475px;
+  height: auto;
 }
 
 .section2 {
-  height: 600px;
+  height: auto;
   background-color: #fcfcfc;
 }
 
 .section2._02 {
   height: 650px;
+  background-color: #ebebeb;
 }
 
 .top-image-container {
-  height: 440px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
   text-align: center;
 }
 
+.top-image-container.mayim-top {
+  padding-top: 175px;
+  padding-bottom: 150px;
+}
+
 .top-image-div-in-container {
-  margin-top: 150px;
+  float: right;
+}
+
+.top-image-div-in-container.cs-top {
+  margin-top: 100px;
+  float: none;
 }
 
 .codesketch-title {
@@ -597,6 +591,7 @@ p {
   font-family: Roboto, sans-serif;
   color: #343434;
   font-size: 49px;
+  line-height: 49px;
   font-weight: 300;
 }
 
@@ -611,14 +606,18 @@ p {
   font-family: Roboto, sans-serif;
   color: #343434;
   font-size: 21px;
-  font-weight: 100;
+  line-height: 22px;
+  font-weight: 300;
 }
 
-.mh-home-link {
-  margin-top: 15px;
-  font-family: Roboto, sans-serif;
-  font-size: 38px;
-  font-weight: 700;
+.section1-container {
+  padding-top: 75px;
+  padding-bottom: 0px;
+}
+
+.section1-container.cs-01 {
+  padding-top: 75px;
+  padding-bottom: 75px;
 }
 
 .m-home-button {
@@ -628,27 +627,41 @@ p {
 }
 
 .top-image {
-  float: right;
+  float: none;
+  clear: none;
 }
 
 .entry-paragraph-text {
   width: 460px;
-  margin-top: 100px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   font-family: Roboto, sans-serif;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 140%;
+  line-height: 160%;
   font-style: normal;
   font-weight: 300;
   text-align: left;
 }
 
 .entry-paragraph-text.section03 {
-  margin-top: 100px;
-  margin-bottom: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .entry-paragraph-text._02-text {
-  margin-top: 100px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.entry-paragraph-text._02-text._4yr {
+  margin-bottom: 10px;
+}
+
+.entry-paragraph-text.my-role-paragraph {
+  max-width: 410px;
+  margin-top: 15px;
+  font-size: 17px;
+  line-height: 29px;
 }
 
 .entry-title {
@@ -659,6 +672,10 @@ p {
 
 .image-colum {
   text-align: center;
+}
+
+.image-colum.right-column {
+  padding-right: 20px;
 }
 
 .caption {
@@ -675,27 +692,23 @@ p {
   padding-left: 35px;
 }
 
-.caption.this-caption {
-  width: 341px;
-}
-
 .entry-photo {
   width: 400px;
-  margin-top: 115px;
+  margin-top: 0px;
 }
 
 .entry-photo.photo-top-margin {
   width: 360px;
-  margin-top: 115px;
+  margin-top: 0px;
 }
 
 .entry-photo.photo-top-margin.large-margin {
-  width: 225px;
-  margin-top: 115px;
+  width: 250px;
+  margin-top: 15px;
 }
 
 .entry-photo.top-margin {
-  margin-top: 175px;
+  margin-top: 75px;
 }
 
 .paragraph-right {
@@ -720,7 +733,7 @@ p {
 
 .bottom-section {
   height: 200px;
-  background-color: #858585;
+  background-color: #ebebeb;
   text-align: center;
 }
 
@@ -753,21 +766,34 @@ p {
 }
 
 .large-section.cs-large {
-  height: 800px;
+  height: auto;
 }
 
 .video-cs-homepage {
-  margin-top: 75px;
+  margin-top: 30px;
   margin-left: 15px;
 }
 
 .section-01 {
-  height: 500px;
+  height: auto;
+  padding-bottom: 50px;
+  background-color: #fcfcfc;
+}
+
+.section-01.mayim-sect-1 {
+  padding-bottom: 0px;
+}
+
+.section-01.grey-back {
+  padding-bottom: 0px;
+  background-color: #ebebeb;
+}
+
+.section-01._4yr-01 {
   background-color: #ebebeb;
 }
 
 .section-03 {
-  height: 419px;
   background-color: #ebebeb;
 }
 
@@ -783,10 +809,14 @@ p {
 
 .question {
   margin-top: 5px;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 130%;
+  line-height: 140%;
   font-weight: 300;
   text-align: left;
+}
+
+.question.q2 {
+  margin-top: 0px;
 }
 
 .text-colum {
@@ -794,16 +824,8 @@ p {
 }
 
 ._2nd-pic {
-  width: 225px;
+  width: 250px;
   margin-top: 15px;
-}
-
-._4year-photo1 {
-  width: 200px;
-}
-
-._4year-pic2 {
-  width: 200px;
 }
 
 .photo-here {
@@ -858,6 +880,210 @@ p {
   background-color: #f3f3f3;
 }
 
+.contact-conainer {
+  margin-top: 20px;
+}
+
+.photos-slider {
+  width: 600px;
+  height: 450px;
+  float: right;
+}
+
+.slide1 {
+  background-image: url('../images/MayimEventPic5.jpg');
+  background-position: 0px 0px;
+  background-size: cover;
+}
+
+.mayim-header {
+  width: 425px;
+  margin-right: 0%;
+  font-family: Lato, sans-serif;
+  color: #fafafa;
+  font-size: 60px;
+  line-height: 65px;
+  text-align: left;
+}
+
+.mayimsubtitle {
+  width: auto;
+  max-width: 400px;
+  margin-top: 0px;
+  color: #f3f3f3;
+  font-size: 17px;
+  line-height: 21px;
+  text-align: left;
+}
+
+.slide2 {
+  background-image: url('../images/MayimEventPic3.jpg');
+  background-position: 0px 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.event-heading {
+  margin-bottom: 0px;
+  font-family: Lato, sans-serif;
+  font-size: 22px;
+}
+
+.left-text-colum {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.eventoverview-paragraph.about-me-text {
+  overflow-x: visible;
+  overflow-y: visible;
+  max-height: 302px;
+}
+
+.eventoverview-paragraph.entry-paragraph-text {
+  width: auto;
+  margin-top: 0px;
+  float: right;
+  font-size: 17px;
+  line-height: 29px;
+}
+
+.my-role-header {
+  text-align: center;
+}
+
+.my-role-header.event-heading {
+  margin-top: 75px;
+  font-size: 35px;
+}
+
+.read-more {
+  font-family: Roboto, sans-serif;
+  font-size: 13px;
+}
+
+.slide3 {
+  background-image: url('../images/MB College Day-DSC_8315.png');
+  background-position: 0px 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slide4 {
+  background-image: url('../images/Mayim Bialik College Day at UCSD-IMG_0177 (1).png');
+  background-position: 100% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slide-5 {
+  background-image: url('../images/Mayim Bialik College Day at UCSD-IMG_9937F (1).png');
+  background-position: 59% 50%;
+  background-size: cover;
+}
+
+.more-info {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.flat-button {
+  margin: 70px 10px;
+  border: 1px solid #4ba689;
+  border-radius: 4px;
+  background-color: #265b4a;
+  box-shadow: #4ba689 0px 3px 0px 0px;
+  -webkit-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
+  color: white;
+}
+
+.flat-button:hover {
+  background-color: #1d4639;
+}
+
+.flat-button:active {
+  box-shadow: none;
+  -webkit-transform: translate(0px, 3px);
+  -ms-transform: translate(0px, 3px);
+  transform: translate(0px, 3px);
+}
+
+.flat-button.submit-button {
+  display: block;
+  width: 75px;
+  margin: 15px auto 0px;
+  float: none;
+}
+
+.top-container {
+  margin: 150px 20px 85px;
+}
+
+.bottom-section-grey {
+  background-color: #ebebeb;
+  text-align: center;
+}
+
+.bottom-section-white {
+  background-color: #fcfcfc;
+  text-align: center;
+}
+
+.section-grey {
+  background-color: #ededed;
+}
+
+.section-white {
+  background-color: white;
+}
+
+.project-text-link {
+  text-decoration: none;
+}
+
+.project-text-label {
+  font-family: Roboto, sans-serif;
+  color: #474747;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.project-text-label:hover {
+  text-decoration: underline;
+}
+
+.project-text-label.graphics-text-label:hover {
+  text-decoration: none;
+}
+
+.project-text-subtitle {
+  margin-top: -2px;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+}
+
+.project-div {
+  display: inline-block;
+  width: 220px;
+}
+
+.ucsd-logo {
+  width: 300px;
+}
+
+.left-column {
+  padding-left: 20px;
+}
+
+.right-column {
+  padding-right: 20px;
+  text-align: center;
+}
+
 html.w-mod-js *[data-ix="fade-in"] {
   opacity: 0;
 }
@@ -876,7 +1102,28 @@ html.w-mod-js *[data-ix="fade-in-2"] {
   transform: translate(-75px, 0px);
 }
 
-html.w-mod-js *[data-ix="pop-towards"] {
+html.w-mod-js *[data-ix="pop-towards-hover-enlarge"] {
+  opacity: 0;
+  -webkit-transform: scale(0.8, 0.8);
+  -ms-transform: scale(0.8, 0.8);
+  transform: scale(0.8, 0.8);
+}
+
+html.w-mod-js *[data-ix="delay1-pop-towards-hover-enlarge-3"] {
+  opacity: 0;
+  -webkit-transform: scale(0.8, 0.8);
+  -ms-transform: scale(0.8, 0.8);
+  transform: scale(0.8, 0.8);
+}
+
+html.w-mod-js *[data-ix="delay2-pop-towards-hover-enlarge-2"] {
+  opacity: 0;
+  -webkit-transform: scale(0.8, 0.8);
+  -ms-transform: scale(0.8, 0.8);
+  transform: scale(0.8, 0.8);
+}
+
+html.w-mod-js *[data-ix="pop-towards-no-delay"] {
   opacity: 0;
   -webkit-transform: scale(0.8, 0.8);
   -ms-transform: scale(0.8, 0.8);
@@ -922,11 +1169,11 @@ html.w-mod-js *[data-ix="pop-downwards-2"] {
   transform: translate(0px, -30px);
 }
 
-html.w-mod-js *[data-ix="pop-downwards-3"] {
+html.w-mod-js *[data-ix="pop-upwards-3"] {
   opacity: 0;
-  -webkit-transform: translate(0px, 50px);
-  -ms-transform: translate(0px, 50px);
-  transform: translate(0px, 50px);
+  -webkit-transform: translate(0px, 100px);
+  -ms-transform: translate(0px, 100px);
+  transform: translate(0px, 100px);
 }
 
 html.w-mod-js *[data-ix="pop-from-left"] {
@@ -943,5 +1190,651 @@ html.w-mod-js *[data-ix="pop-from-right"] {
   transform: translate(150px, 0px);
 }
 
-@media (max-width: 479px) {}
+html.w-mod-js *[data-ix="pop-towards-only"] {
+  opacity: 0;
+  -webkit-transform: scale(0.8, 0.8);
+  -ms-transform: scale(0.8, 0.8);
+  transform: scale(0.8, 0.8);
+}
+
+html.w-mod-js *[data-ix="pop-downwards-load"] {
+  opacity: 0;
+  -webkit-transform: translate(0px, -40px);
+  -ms-transform: translate(0px, -40px);
+  transform: translate(0px, -40px);
+}
+
+html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
+  opacity: 0;
+  -webkit-transform: translate(0px, -40px);
+  -ms-transform: translate(0px, -40px);
+  transform: translate(0px, -40px);
+}
+
+html.w-mod-js *[data-ix="pop-towards-hover-enlarge-small"] {
+  opacity: 0;
+  -webkit-transform: scale(0.8, 0.8);
+  -ms-transform: scale(0.8, 0.8);
+  transform: scale(0.8, 0.8);
+}
+
+@media (max-width: 991px) {
+  .background {
+    height: 500px;
+  }
+  .about.about-container {
+    height: auto;
+  }
+  .about.contact-section {
+    height: 375px;
+  }
+  .about-me-text {
+    font-size: 15px;
+  }
+  .quote {
+    width: 45%;
+    margin-top: 200px;
+    margin-right: 50px;
+    font-size: 150%;
+    text-align: left;
+  }
+  .resume-link {
+    font-size: 13px;
+  }
+  .resume-link.news-link {
+    font-size: 13px;
+  }
+  .challenge {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .interestslikes {
+    display: none;
+    overflow-x: visible;
+    overflow-y: visible;
+    width: 350px;
+  }
+  .pic-div {
+    width: 200px;
+    height: 200px;
+    min-height: auto;
+    min-width: auto;
+    margin-left: 20px;
+  }
+  .top-image-section._4-year {
+    height: auto;
+    min-height: auto;
+  }
+  .top-image-section.mayim {
+    min-height: auto;
+  }
+  .top-image-container.mayim-top {
+    padding-top: 300px;
+    padding-bottom: 0px;
+    text-align: center;
+  }
+  .top-image-div-in-container {
+    display: inline-block;
+    float: none;
+    text-align: center;
+  }
+  .codesketch-title {
+    margin-top: 15px;
+    padding-top: 0px;
+    font-size: 25px;
+    line-height: 31px;
+  }
+  .cs-logo {
+    height: 150px;
+  }
+  .subtitile {
+    margin-top: 0px;
+    padding-top: 0px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .section1-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .section1-container.cs-01 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .section1-container.last-section {
+    padding-bottom: 0px;
+  }
+  .top-image {
+    width: 325px;
+    height: auto;
+    margin-top: 0%;
+  }
+  .entry-paragraph-text {
+    width: auto;
+    float: none;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .entry-paragraph-text.my-role-paragraph {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .caption {
+    font-size: 10px;
+    line-height: 13px;
+  }
+  .entry-photo {
+    width: 352px;
+  }
+  .entry-photo.photo-top-margin {
+    width: 300px;
+  }
+  .entry-photo.photo-top-margin.large-margin {
+    width: 225px;
+  }
+  .entry-photo.top-margin {
+    width: 300px;
+  }
+  .paragraph-right {
+    padding-right: 20px;
+  }
+  .bottom-section.section-white._4-yr {
+    height: 150px;
+  }
+  .paper-pic {
+    width: 300px;
+  }
+  .view-skills {
+    width: 325px;
+  }
+  ._2nd-pic {
+    width: 225px;
+  }
+  .photo-here {
+    width: 275px;
+    float: none;
+  }
+  ._4year-photo3 {
+    width: 225px;
+    margin-left: 50px;
+  }
+  .photos-slider {
+    width: 450px;
+    height: 300px;
+  }
+  .mayim-header {
+    display: inline-block;
+    width: 600px;
+    margin-bottom: 0px;
+    font-size: 45px;
+  }
+  .mayimsubtitle {
+    display: inline-block;
+    width: 450px;
+    max-width: 450px;
+    margin-bottom: 25px;
+    font-size: 15px;
+  }
+  .eventoverview-paragraph.entry-paragraph-text {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .more-info {
+    font-size: 14px;
+  }
+  .ucsd-logo {
+    width: 225px;
+  }
+  .all-questions {
+    font-size: 75%;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  h4 {
+    text-align: left;
+  }
+  p {
+    text-align: left;
+  }
+  strong {
+    text-align: left;
+  }
+  .nav-bar-center {
+    height: auto;
+    font-size: 12px;
+  }
+  .nav-text {
+    display: block;
+    float: none;
+    border-top: 1px solid #d1d1d1;
+    border-bottom: 1px solid #d1d1d1;
+    background-color: #265c4a;
+    color: white;
+    font-size: 17px;
+    line-height: 18px;
+  }
+  .nav-text.w--current {
+    display: block;
+    float: none;
+    border-style: solid solid none;
+    border-width: 1px 1px 0px;
+    border-color: #d1d1d1;
+    color: white;
+    font-size: 17px;
+  }
+  .background {
+    height: 375px;
+  }
+  .about.about-container {
+    height: 300px;
+    margin-bottom: 75px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .about.contact-section {
+    height: 300px;
+  }
+  .work-div.section {
+    margin-top: 75px;
+    margin-bottom: 75px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+  .work-header-text {
+    margin-top: 0px;
+    padding-top: 0px;
+    font-size: 30px;
+  }
+  .contact-section.contact-class2 {
+    margin-top: 75px;
+    margin-bottom: 30px;
+    padding-top: 50px;
+  }
+  .contact-form {
+    width: 230px;
+    padding-top: 0px;
+  }
+  .feild-label {
+    margin-bottom: 0px;
+    font-size: 13px;
+  }
+  .feild-label.top-field-label {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 13px;
+  }
+  .work-container {
+    margin-bottom: 20px;
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+  .about-me-text {
+    font-size: 12px;
+    line-height: 22px;
+  }
+  .hi {
+    font-size: 30px;
+  }
+  .quote {
+    margin-top: 150px;
+    margin-right: 40px;
+    line-height: 40px;
+  }
+  .work-icon {
+    display: block;
+    width: 175px;
+    height: 175px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+  .navbar {
+    box-shadow: black 0px 0px 25px 0px;
+  }
+  .footer {
+    padding-left: 25px;
+  }
+  .footer-text {
+    margin-left: 20px;
+  }
+  .form {
+    width: 230px;
+    text-align: center;
+  }
+  .resume-link {
+    display: none;
+  }
+  .resume-link.news-link {
+    display: none;
+  }
+  .challenge {
+    display: inline-block;
+    width: 325px;
+    text-align: center;
+  }
+  .text-feild {
+    width: 230px;
+    height: 25px;
+    font-size: 12px;
+    line-height: 17px;
+  }
+  .submit-button {
+    height: 30px;
+    float: none;
+    font-size: 13px;
+    line-height: 11px;
+  }
+  .header {
+    margin-top: 0px;
+    font-size: 30px;
+  }
+  .pic-div {
+    width: 175px;
+    height: 175px;
+    margin-top: 10px;
+  }
+  .message-box.text-feild {
+    font-size: 12px;
+  }
+  .top-image-section.codesketch {
+    min-height: 0px;
+  }
+  .cs-logo {
+    height: 200px;
+  }
+  .section1-container {
+    padding-top: 30px;
+    padding-bottom: 0px;
+    text-align: center;
+  }
+  .section1-container.cs-01 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+  .m-home-button {
+    width: 30px;
+    margin-top: 15px;
+  }
+  .top-image {
+    display: none;
+  }
+  .entry-paragraph-text {
+    display: inline-block;
+    width: 325px;
+    min-width: 0px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .entry-paragraph-text.my-role-paragraph {
+    width: 450px;
+  }
+  .image-colum.right-column {
+    text-align: center;
+  }
+  .image-colum.disapear {
+    display: none;
+  }
+  .image-colum._4yr-disappear {
+    display: none;
+  }
+  .caption {
+    display: inline-block;
+    width: 325px;
+  }
+  .caption.section06 {
+    display: inline-block;
+    width: 325px;
+  }
+  .caption.disappear {
+    display: none;
+  }
+  .entry-photo {
+    width: 325px;
+    margin-top: 20px;
+  }
+  .entry-photo.photo-top-margin.disappear {
+    display: none;
+  }
+  .entry-photo.top-margin {
+    margin-top: 20px;
+  }
+  .bottom-section.section-white._4-yr {
+    height: 125px;
+  }
+  .video-cs-homepage {
+    display: inline-block;
+    width: 425px;
+  }
+  .photo-here {
+    width: 225px;
+  }
+  ._4year-photo3 {
+    width: 200px;
+    margin-top: 15px;
+  }
+  .menu-but.w--open {
+    background-color: #265c4a;
+  }
+  .hamburger-icon {
+    width: auto;
+    color: #4ba689;
+  }
+  .hamburger-icon:hover {
+    color: #265c4a;
+  }
+  .nav-menu {
+    box-shadow: black 0px 1px 20px 0px;
+  }
+  .photos-slider {
+    display: inline-block;
+    float: none;
+  }
+  .mayim-header {
+    width: 470px;
+    margin-bottom: 20px;
+    font-size: 35px;
+  }
+  .mayimsubtitle {
+    display: none;
+  }
+  .left-text-colum.left-column {
+    text-align: center;
+  }
+  .eventoverview-paragraph.entry-paragraph-text {
+    display: inline-block;
+    width: 450px;
+    float: none;
+  }
+  .mayim-lightbox {
+    width: 450px;
+  }
+  .more-info {
+    width: 500px;
+  }
+  .flat-button {
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+  .top-container {
+    margin-top: 75px;
+    margin-bottom: 50px;
+  }
+  .ucsd-logo {
+    margin-top: 20px;
+  }
+  .left-column {
+    display: block;
+  }
+  .all-questions {
+    display: inline-block;
+    width: 325px;
+  }
+  .right-column {
+    text-align: center;
+  }
+  .center {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 479px) {
+  .nav-text {
+    font-size: 15px;
+    line-height: 10px;
+  }
+  .nav-text.w--current {
+    font-size: 15px;
+  }
+  .background {
+    position: relative;
+    height: 500px;
+    background-size: 640px;
+    background-repeat: repeat-y;
+  }
+  .about.about-container {
+    height: auto;
+    margin-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  .about.contact-section {
+    height: auto;
+  }
+  .work-div.section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 30px;
+    text-align: center;
+  }
+  .work-header-text {
+    margin-bottom: 0px;
+  }
+  .contact-section.contact-class2 {
+    margin-top: 50px;
+  }
+  .work-container {
+    display: block;
+    padding-right: 0px;
+    padding-left: 0px;
+    text-align: center;
+  }
+  .about-me-text {
+    height: auto;
+    max-height: 200px;
+    max-width: 651px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    text-align: left;
+  }
+  .hi {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .quote {
+    display: block;
+    width: 47%;
+    margin-top: 225px;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .work-icon {
+    position: static;
+    display: inline-block;
+    clear: none;
+  }
+  .work-section {
+    text-align: center;
+  }
+  .footer-big-text {
+    margin-left: 0px;
+  }
+  .challenge {
+    width: 275px;
+  }
+  .pic-div {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    max-height: 100px;
+    max-width: 100px;
+    min-height: auto;
+    min-width: auto;
+    margin-top: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
+    float: none;
+    clear: none;
+    text-align: center;
+  }
+  .top-image-section.mayim {
+    background-image: url('../images/MayimEventPic3.jpg');
+    background-position: 0px 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .top-image-container.mayim-top {
+    height: 400px;
+    padding-top: 75px;
+  }
+  .entry-paragraph-text {
+    width: 275px;
+  }
+  .entry-paragraph-text.my-role-paragraph {
+    display: inline-block;
+    width: 250px;
+    padding-top: 1px;
+  }
+  .entry-photo {
+    width: 250px;
+  }
+  .entry-photo.top-margin {
+    width: 250px;
+  }
+  .div-to-center-pic {
+    text-align: center;
+  }
+  .photos-slider {
+    width: 275px;
+    height: 200px;
+  }
+  .mayim-header {
+    width: 225px;
+    font-size: 28px;
+    line-height: 36px;
+    text-align: center;
+  }
+  .eventoverview-paragraph.entry-paragraph-text {
+    width: 275px;
+  }
+  .mayim-lightbox {
+    width: 275px;
+  }
+  .project-text-label {
+    display: inline-block;
+  }
+  .project-div {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .all-questions {
+    width: 275px;
+  }
+  .colum {
+    padding-right: 0px;
+    text-align: center;
+  }
+}
 
