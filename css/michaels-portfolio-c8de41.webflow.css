@@ -123,6 +123,11 @@ strong {
   text-align: center;
 }
 
+.work-header-text.my-projects {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
 .contact-section {
   height: auto;
   margin-top: 0px;
@@ -189,8 +194,10 @@ strong {
 .work-container {
   display: block;
   margin: 18px auto 34px;
+  padding-top: 80px;
   padding-right: 0px;
-  padding-bottom: 0px;
+  padding-bottom: 80px;
+  background-color: white;
   text-align: center;
 }
 
@@ -314,6 +321,11 @@ strong {
   box-shadow: black 0px 0px 25px 0px;
 }
 
+.work-section {
+  background-color: white;
+  box-shadow: black 0px 1px 10px 0px;
+}
+
 .footer {
   margin-top: 0px;
   background-color: #292929;
@@ -382,7 +394,7 @@ strong {
   margin-bottom: 10px;
   font-family: Roboto, sans-serif;
   color: #333;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   text-decoration: underline;
 }
@@ -612,7 +624,7 @@ strong {
 
 .section1-container {
   padding-top: 75px;
-  padding-bottom: 0px;
+  padding-bottom: 70px;
 }
 
 .section1-container.cs-01 {
@@ -1045,6 +1057,7 @@ strong {
 }
 
 .project-text-label {
+  display: block;
   font-family: Roboto, sans-serif;
   color: #474747;
   font-size: 16px;
@@ -1068,7 +1081,7 @@ strong {
 
 .project-div {
   display: inline-block;
-  width: 220px;
+  width: 23%;
 }
 
 .ucsd-logo {
@@ -1117,6 +1130,13 @@ html.w-mod-js *[data-ix="delay1-pop-towards-hover-enlarge-3"] {
 }
 
 html.w-mod-js *[data-ix="delay2-pop-towards-hover-enlarge-2"] {
+  opacity: 0;
+  -webkit-transform: scale(0.8, 0.8);
+  -ms-transform: scale(0.8, 0.8);
+  transform: scale(0.8, 0.8);
+}
+
+html.w-mod-js *[data-ix="delay2-pop-towards-hover-enlarge-3"] {
   opacity: 0;
   -webkit-transform: scale(0.8, 0.8);
   -ms-transform: scale(0.8, 0.8);
