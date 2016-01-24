@@ -77,6 +77,7 @@ strong {
 
 .about.about-container {
   height: auto;
+  margin-bottom: 125px;
   padding: 80px 50px;
 }
 
@@ -137,7 +138,7 @@ strong {
 }
 
 .contact-section.contact-class2 {
-  margin-top: 100px;
+  margin-top: 125px;
   margin-bottom: 75px;
   box-shadow: black 0px 1px 10px 0px;
 }
@@ -248,14 +249,22 @@ strong {
 
 .work-icon {
   position: relative;
-  display: inline-block;
+  display: block;
   width: 220px;
   height: 220px;
+  max-height: 220px;
+  max-width: 220px;
+  min-height: 220px;
+  min-width: 220px;
   margin: 10px auto 0px;
-  padding: 10px;
+  padding: 0px;
   clear: both;
   -webkit-perspective-origin: 100% 100%;
   perspective-origin: 100% 100%;
+  -webkit-transition: box-shadow 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  transition: box-shadow 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  transition: box-shadow 500ms ease-in-out, transform 500ms ease-in-out;
+  transition: box-shadow 500ms ease-in-out, transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
 }
 
 .mass-image {
@@ -314,6 +323,7 @@ strong {
 .navbar {
   position: fixed;
   width: 100%;
+  margin-right: 2px;
   clear: both;
   background-color: white;
   background-image: -webkit-linear-gradient(white 41%, #ebe9e9);
@@ -394,7 +404,7 @@ strong {
   margin-bottom: 10px;
   font-family: Roboto, sans-serif;
   color: #333;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 300;
   text-decoration: underline;
 }
@@ -402,6 +412,10 @@ strong {
 .resume-link:hover {
   color: #265b4a;
   font-weight: 400;
+}
+
+.resume-link.news-link {
+  font-size: 17px;
 }
 
 .work-text-link {
@@ -464,7 +478,7 @@ strong {
 
 .interestslikes {
   max-width: 475px;
-  margin-top: 15px;
+  margin-top: 40px;
   margin-bottom: 0px;
   margin-left: 0px;
 }
@@ -477,20 +491,18 @@ strong {
 }
 
 .likes {
-  margin-top: 5px;
+  margin-top: 20px;
   margin-bottom: 10px;
   font-family: Roboto, sans-serif;
   color: #585858;
-  font-size: 17px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .pic-div {
-  max-height: 300px;
-  max-width: 300px;
-  min-height: 300px;
-  min-width: 300px;
-  margin-top: 15px;
+  width: 325px;
+  height: 325px;
+  margin-top: 16px;
   float: right;
   background-image: url('../images/Headshot Circle.png'), url('../images/B&W Photo of Me.png');
   background-position: 0px 0px, 0px 0px;
@@ -553,6 +565,13 @@ strong {
   background-image: none;
 }
 
+.top-image-section.arduino {
+  height: auto;
+  background-image: url('../images/Arduino Cover + Rectangle 20 (darker).png');
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
 .section1 {
   height: 550px;
   background-color: #ebebeb;
@@ -584,17 +603,27 @@ strong {
 }
 
 .top-image-container.mayim-top {
-  padding-top: 175px;
-  padding-bottom: 150px;
+  padding-top: 200px;
+  padding-bottom: 175px;
 }
 
 .top-image-div-in-container {
+  height: auto;
   float: right;
+  text-align: right;
 }
 
 .top-image-div-in-container.cs-top {
   margin-top: 100px;
   float: none;
+}
+
+.top-image-div-in-container.arduino-top-text-div {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  float: none;
+  text-align: center;
 }
 
 .codesketch-title {
@@ -747,6 +776,10 @@ strong {
   height: 200px;
   background-color: #ebebeb;
   text-align: center;
+}
+
+.bottom-section.section-white._4-yr {
+  height: auto;
 }
 
 .blog-but {
@@ -903,6 +936,16 @@ strong {
 }
 
 .slide1 {
+  background-image: url('../images/IMG_5241.jpg');
+  background-position: 0px 0px;
+  background-size: contain;
+}
+
+.slide1.arduino-slide {
+  background-image: none;
+}
+
+.slide1.mayimslide1 {
   background-image: url('../images/MayimEventPic5.jpg');
   background-position: 0px 0px;
   background-size: cover;
@@ -911,34 +954,76 @@ strong {
 .mayim-header {
   width: 425px;
   margin-right: 0%;
+  float: none;
   font-family: Lato, sans-serif;
   color: #fafafa;
   font-size: 60px;
   line-height: 65px;
+  font-style: normal;
+  font-weight: 700;
   text-align: left;
 }
 
+.mayim-header.arduino-header {
+  width: auto;
+  text-align: center;
+}
+
+.mayim-header.mayim-headerreally {
+  display: block;
+  float: none;
+  clear: none;
+}
+
 .mayimsubtitle {
+  display: inline-block;
   width: auto;
   max-width: 400px;
   margin-top: 0px;
   color: #f3f3f3;
   font-size: 17px;
   line-height: 21px;
+  text-align: center;
+}
+
+.mayimsubtitle.arduino-subtitle {
+  max-width: 550px;
+  float: none;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.mayimsubtitle.mayimsub {
+  position: static;
+  display: block;
+  float: none;
   text-align: left;
 }
 
 .slide2 {
-  background-image: url('../images/MayimEventPic3.jpg');
+  background-image: url('../images/IMG_5283.jpg');
   background-position: 0px 0px;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+.slide2.mayim-slide2 {
+  background-image: url('../images/MB College Day-DSC_8315.png');
+  background-size: cover;
+}
+
 .event-heading {
-  margin-bottom: 0px;
+  margin-bottom: 10px;
   font-family: Lato, sans-serif;
   font-size: 22px;
+  line-height: 30px;
+}
+
+.event-heading.ard-heading {
+  font-size: 30px;
+  line-height: 35px;
 }
 
 .left-text-colum {
@@ -955,6 +1040,7 @@ strong {
 .eventoverview-paragraph.entry-paragraph-text {
   width: auto;
   margin-top: 0px;
+  margin-bottom: 10px;
   float: right;
   font-size: 17px;
   line-height: 29px;
@@ -969,21 +1055,38 @@ strong {
   font-size: 35px;
 }
 
+.mayim-lightbox.fannies {
+  display: inline-block;
+  margin-top: 25px;
+}
+
 .read-more {
   font-family: Roboto, sans-serif;
   font-size: 13px;
 }
 
 .slide3 {
-  background-image: url('../images/MB College Day-DSC_8315.png');
+  background-image: url('../images/IMG_5231.jpg'), url('../images/MB College Day-DSC_8315.png');
+  background-position: 0px 0px, 0px 0px;
+  background-size: contain, cover;
+  background-repeat: repeat, no-repeat;
+}
+
+.slide3.mayimslide3 {
+  background-image: url('../images/Mayim Bialik College Day at UCSD-IMG_0177 (1).png');
   background-position: 0px 0px;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .slide4 {
-  background-image: url('../images/Mayim Bialik College Day at UCSD-IMG_0177 (1).png');
-  background-position: 100% 50%;
+  background-image: url('../images/MayimEventPic3.jpg');
+  background-position: 0px 0px;
+  background-size: cover;
+}
+
+.slide4.slide-4-arduino {
+  background-image: url('../images/IMG_5237.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1002,7 +1105,7 @@ strong {
 }
 
 .flat-button {
-  margin: 70px 10px;
+  margin: 90px 20px 125px;
   border: 1px solid #4ba689;
   border-radius: 4px;
   background-color: #265b4a;
@@ -1028,6 +1131,17 @@ strong {
   width: 75px;
   margin: 15px auto 0px;
   float: none;
+}
+
+.flat-button.cs-blog-button {
+  display: inline-block;
+  width: 125px;
+  margin: 0px auto;
+  border-width: 1px;
+  border-color: #4ba689;
+  background-color: white;
+  box-shadow: #4ba689 0px 3px 0px 0px;
+  color: #265c4a;
 }
 
 .top-container {
@@ -1081,7 +1195,11 @@ strong {
 
 .project-div {
   display: inline-block;
-  width: 23%;
+  width: 230px;
+  height: 260px;
+  min-width: 230px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .ucsd-logo {
@@ -1095,6 +1213,51 @@ strong {
 .right-column {
   padding-right: 20px;
   text-align: center;
+}
+
+.div-for-work-icons {
+  display: block;
+  width: 750px;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.arduino-post-its {
+  margin-top: 20px;
+}
+
+.arrow {
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.arrow:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.overview-div {
+  text-align: center;
+}
+
+.overview-paragraph {
+  display: block;
+  max-width: 650px;
+  margin-right: auto;
+  margin-bottom: 75px;
+  margin-left: auto;
+  color: #3d3d3d;
+  font-size: 26px;
+  line-height: 42px;
+  font-weight: 300;
+}
+
+.overview-heading {
+  display: none;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
 }
 
 html.w-mod-js *[data-ix="fade-in"] {
@@ -1113,6 +1276,13 @@ html.w-mod-js *[data-ix="fade-in-2"] {
   -webkit-transform: translate(-75px, 0px);
   -ms-transform: translate(-75px, 0px);
   transform: translate(-75px, 0px);
+}
+
+html.w-mod-js *[data-ix="pop-towards-only"] {
+  opacity: 0;
+  -webkit-transform: scale(0.8, 0.8);
+  -ms-transform: scale(0.8, 0.8);
+  transform: scale(0.8, 0.8);
 }
 
 html.w-mod-js *[data-ix="pop-towards-hover-enlarge"] {
@@ -1136,7 +1306,14 @@ html.w-mod-js *[data-ix="delay2-pop-towards-hover-enlarge-2"] {
   transform: scale(0.8, 0.8);
 }
 
-html.w-mod-js *[data-ix="delay2-pop-towards-hover-enlarge-3"] {
+html.w-mod-js *[data-ix="delay3-pop-towards-hover-enlarge-3"] {
+  opacity: 0;
+  -webkit-transform: scale(0.8, 0.8);
+  -ms-transform: scale(0.8, 0.8);
+  transform: scale(0.8, 0.8);
+}
+
+html.w-mod-js *[data-ix="delay4-pop-towards-hover-enlarge"] {
   opacity: 0;
   -webkit-transform: scale(0.8, 0.8);
   -ms-transform: scale(0.8, 0.8);
@@ -1210,13 +1387,6 @@ html.w-mod-js *[data-ix="pop-from-right"] {
   transform: translate(150px, 0px);
 }
 
-html.w-mod-js *[data-ix="pop-towards-only"] {
-  opacity: 0;
-  -webkit-transform: scale(0.8, 0.8);
-  -ms-transform: scale(0.8, 0.8);
-  transform: scale(0.8, 0.8);
-}
-
 html.w-mod-js *[data-ix="pop-downwards-load"] {
   opacity: 0;
   -webkit-transform: translate(0px, -40px);
@@ -1258,6 +1428,9 @@ html.w-mod-js *[data-ix="pop-towards-hover-enlarge-small"] {
     font-size: 150%;
     text-align: left;
   }
+  .work-section {
+    margin-top: 125px;
+  }
   .resume-link {
     font-size: 13px;
   }
@@ -1289,7 +1462,7 @@ html.w-mod-js *[data-ix="pop-towards-hover-enlarge-small"] {
     min-height: auto;
   }
   .top-image-container.mayim-top {
-    padding-top: 300px;
+    padding-top: 150px;
     padding-bottom: 0px;
     text-align: center;
   }
@@ -1324,6 +1497,9 @@ html.w-mod-js *[data-ix="pop-towards-hover-enlarge-small"] {
   .section1-container.last-section {
     padding-bottom: 0px;
   }
+  .section1-container.ard-bottom {
+    padding-bottom: 0px;
+  }
   .top-image {
     width: 325px;
     height: auto;
@@ -1336,8 +1512,8 @@ html.w-mod-js *[data-ix="pop-towards-hover-enlarge-small"] {
     line-height: 22px;
   }
   .entry-paragraph-text.my-role-paragraph {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 12px;
+    line-height: 20px;
   }
   .caption {
     font-size: 10px;
@@ -1359,7 +1535,7 @@ html.w-mod-js *[data-ix="pop-towards-hover-enlarge-small"] {
     padding-right: 20px;
   }
   .bottom-section.section-white._4-yr {
-    height: 150px;
+    height: auto;
   }
   .paper-pic {
     width: 300px;
@@ -1387,6 +1563,7 @@ html.w-mod-js *[data-ix="pop-towards-hover-enlarge-small"] {
     width: 600px;
     margin-bottom: 0px;
     font-size: 45px;
+    text-align: center;
   }
   .mayimsubtitle {
     display: inline-block;
@@ -1394,10 +1571,27 @@ html.w-mod-js *[data-ix="pop-towards-hover-enlarge-small"] {
     max-width: 450px;
     margin-bottom: 25px;
     font-size: 15px;
+    text-align: center;
+  }
+  .slide2 {
+    background-size: cover;
+  }
+  .event-heading.ard-heading {
+    font-size: 19px;
+    line-height: 25px;
   }
   .eventoverview-paragraph.entry-paragraph-text {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .my-role-header.event-heading.arduino {
+    font-size: 19px;
+  }
+  .slide3 {
+    background-size: cover, cover;
+  }
+  .slide4 {
+    background-size: cover;
   }
   .more-info {
     font-size: 14px;
@@ -1408,6 +1602,14 @@ html.w-mod-js *[data-ix="pop-towards-hover-enlarge-small"] {
   .all-questions {
     font-size: 75%;
     line-height: 18px;
+  }
+  .arduino-post-its {
+    display: none;
+  }
+  .overview-paragraph {
+    max-width: 588px;
+    font-size: 20px;
+    line-height: 35px;
   }
 }
 
@@ -1558,6 +1760,9 @@ html.w-mod-js *[data-ix="pop-towards-hover-enlarge-small"] {
   .message-box.text-feild {
     font-size: 12px;
   }
+  .top-image-section.mayim {
+    background-position: 0px 0px, -17px 27px;
+  }
   .top-image-section.codesketch {
     min-height: 0px;
   }
@@ -1566,12 +1771,12 @@ html.w-mod-js *[data-ix="pop-towards-hover-enlarge-small"] {
   }
   .section1-container {
     padding-top: 30px;
-    padding-bottom: 0px;
+    padding-bottom: 25px;
     text-align: center;
   }
   .section1-container.cs-01 {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     text-align: center;
   }
   .m-home-button {
@@ -1652,13 +1857,33 @@ html.w-mod-js *[data-ix="pop-towards-hover-enlarge-small"] {
     display: inline-block;
     float: none;
   }
+  .slide1 {
+    background-image: url('../images/MayimEventPic5.jpg'), url('../images/IMG_5241.jpg');
+    background-position: 0px 0px, 0px 0px;
+    background-size: cover, contain;
+  }
   .mayim-header {
     width: 470px;
     margin-bottom: 20px;
     font-size: 35px;
   }
+  .mayim-header.arduino-header {
+    margin-bottom: 0px;
+    font-size: 40px;
+  }
   .mayimsubtitle {
     display: none;
+  }
+  .mayimsubtitle.arduino-subtitle {
+    display: inline-block;
+    width: 350px;
+    font-size: 17px;
+    line-height: 22px;
+  }
+  .slide2 {
+    background-image: url('../images/MB College Day-DSC_8315.png');
+    background-position: 0px 0px;
+    background-size: cover;
   }
   .left-text-colum.left-column {
     text-align: center;
@@ -1699,6 +1924,15 @@ html.w-mod-js *[data-ix="pop-towards-hover-enlarge-small"] {
     display: block;
     margin-right: auto;
     margin-left: auto;
+    text-align: center;
+  }
+  .arduino-lightbox {
+    margin-top: -25px;
+  }
+  .overview-paragraph {
+    max-width: 425px;
+    font-size: 17px;
+    line-height: 25px;
     text-align: center;
   }
 }
@@ -1806,7 +2040,7 @@ html.w-mod-js *[data-ix="pop-towards-hover-enlarge-small"] {
   }
   .top-image-container.mayim-top {
     height: 400px;
-    padding-top: 75px;
+    padding-top: 150px;
   }
   .entry-paragraph-text {
     width: 275px;
@@ -1816,11 +2050,26 @@ html.w-mod-js *[data-ix="pop-towards-hover-enlarge-small"] {
     width: 250px;
     padding-top: 1px;
   }
+  .entry-title {
+    font-size: 19px;
+  }
+  .caption {
+    width: 270px;
+  }
   .entry-photo {
     width: 250px;
   }
+  .entry-photo.photo-top-margin {
+    width: 270px;
+  }
   .entry-photo.top-margin {
     width: 250px;
+  }
+  .view-skills {
+    width: 270px;
+  }
+  .video-cs-homepage {
+    max-width: 270px;
   }
   .div-to-center-pic {
     text-align: center;
@@ -1834,6 +2083,17 @@ html.w-mod-js *[data-ix="pop-towards-hover-enlarge-small"] {
     font-size: 28px;
     line-height: 36px;
     text-align: center;
+  }
+  .mayim-header.arduino-header {
+    width: 250px;
+    font-size: 37px;
+    line-height: 39px;
+  }
+  .mayimsubtitle.arduino-subtitle {
+    max-width: 250px;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 19px;
   }
   .eventoverview-paragraph.entry-paragraph-text {
     width: 275px;
@@ -1855,6 +2115,12 @@ html.w-mod-js *[data-ix="pop-towards-hover-enlarge-small"] {
   .colum {
     padding-right: 0px;
     text-align: center;
+  }
+  .overview-paragraph {
+    max-width: 270px;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 300;
   }
 }
 
