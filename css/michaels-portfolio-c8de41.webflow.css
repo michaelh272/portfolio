@@ -446,6 +446,7 @@ strong {
 }
 
 .text-feild {
+  width: 267px;
   border-color: rgba(128, 128, 128, 0.26);
   border-radius: 2px;
   background-color: #fafafa;
@@ -517,6 +518,7 @@ strong {
 }
 
 .message-box.text-feild {
+  height: 90px;
   font-family: Roboto, sans-serif;
   font-size: 13px;
 }
@@ -1259,6 +1261,33 @@ strong {
   font-weight: 400;
 }
 
+.form-success-box {
+  display: block;
+  width: 375px;
+  margin-right: auto;
+  margin-left: -57px;
+  background-color: #4ba689;
+}
+
+.form-success-text {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: Roboto, sans-serif;
+  color: white;
+  font-size: 15px;
+  text-align: left;
+}
+
+.form-error-box {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.form-error-text {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 html.w-mod-js *[data-ix="fade-in"] {
   opacity: 0;
 }
@@ -1398,13 +1427,6 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
   -webkit-transform: translate(0px, -40px);
   -ms-transform: translate(0px, -40px);
   transform: translate(0px, -40px);
-}
-
-html.w-mod-js *[data-ix="pop-towards-hover-enlarge-small"] {
-  opacity: 0;
-  -webkit-transform: scale(0.8, 0.8);
-  -ms-transform: scale(0.8, 0.8);
-  transform: scale(0.8, 0.8);
 }
 
 @media (max-width: 991px) {
