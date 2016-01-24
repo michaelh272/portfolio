@@ -58,8 +58,7 @@ strong {
   display: block;
   overflow-x: scroll;
   overflow-y: scroll;
-  height: 600px;
-  background-color: #3a3a3a;
+  height: auto;
   background-image: url('../images/Shaded imageV2.png');
   background-position: 0px 0px;
   background-size: cover;
@@ -235,7 +234,7 @@ strong {
   overflow-y: hidden;
   width: 54%;
   height: auto;
-  margin: 275px 100px 0px 0px;
+  margin: 275px 100px 225px 0px;
   padding: 0px 0px 0px 19px;
   float: right;
   clear: none;
