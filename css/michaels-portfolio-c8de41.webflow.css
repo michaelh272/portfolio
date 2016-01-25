@@ -148,7 +148,6 @@ strong {
   margin-right: auto;
   margin-bottom: 0px;
   margin-left: auto;
-  padding-top: 45px;
   padding-bottom: 48px;
   float: none;
   direction: ltr;
@@ -380,7 +379,6 @@ strong {
 }
 
 .form {
-  margin-top: 6px;
   margin-bottom: 16px;
   text-align: center;
 }
@@ -470,10 +468,16 @@ strong {
 }
 
 .header {
+  margin-top: 0px;
   margin-bottom: 0px;
   font-family: Lato, sans-serif;
   color: #265b4a;
   font-weight: 900;
+  text-align: center;
+}
+
+.header.get-in-touch-header {
+  margin-bottom: 30px;
 }
 
 .interestslikes {
@@ -928,6 +932,8 @@ strong {
 
 .contact-conainer {
   margin-top: 20px;
+  padding-top: 80px;
+  padding-bottom: 50px;
 }
 
 .photos-slider {
@@ -1128,9 +1134,9 @@ strong {
 }
 
 .flat-button.submit-button {
-  display: block;
+  display: inline;
   width: 75px;
-  margin: 15px auto 0px;
+  margin: 20px auto 0px;
   float: none;
 }
 
@@ -1218,7 +1224,7 @@ strong {
 
 .div-for-work-icons {
   display: block;
-  width: 750px;
+  max-width: 750px;
   margin-top: 20px;
   margin-right: auto;
   margin-left: auto;
@@ -1262,7 +1268,6 @@ strong {
 }
 
 .form-success-box {
-  display: block;
   width: 375px;
   margin-right: auto;
   margin-left: -57px;
@@ -1286,6 +1291,10 @@ strong {
 .form-error-text {
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+.form-wrapper.contact-form {
+  padding-top: 0px;
 }
 
 html.w-mod-js *[data-ix="fade-in"] {
@@ -1624,6 +1633,9 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
     font-size: 75%;
     line-height: 18px;
   }
+  .div-for-work-icons {
+    max-width: 600px;
+  }
   .arduino-post-its {
     display: none;
   }
@@ -1721,7 +1733,7 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
     font-size: 30px;
   }
   .quote {
-    margin-top: 150px;
+    margin-top: 175px;
     margin-right: 40px;
     line-height: 40px;
   }
