@@ -46,7 +46,7 @@ strong {
 }
 
 .nav-text.w--current:active {
-  background-color: rgba(39, 92, 75, 0.26);
+  background-color: rgba(39, 92, 75, .26);
 }
 
 .nav-text.w--current:focus {
@@ -56,8 +56,7 @@ strong {
 .background {
   position: relative;
   display: block;
-  overflow-x: scroll;
-  overflow-y: scroll;
+  overflow: scroll;
   height: auto;
   background-image: url('../images/Shaded imageV2.png');
   background-position: 0px 0px;
@@ -71,7 +70,7 @@ strong {
   height: 478px;
   margin-top: 0px;
   margin-bottom: 100px;
-  background-color: white;
+  background-color: #fff;
 }
 
 .about.about-container {
@@ -82,7 +81,7 @@ strong {
 
 .about.contact-section {
   margin-top: 10px;
-  box-shadow: black 0px 1px 10px 0px;
+  box-shadow: 0 1px 10px 0 #000;
 }
 
 .about-pic {
@@ -103,12 +102,12 @@ strong {
   margin-bottom: 40px;
   padding-top: 8px;
   padding-bottom: 67px;
-  background-color: white;
-  box-shadow: rgba(8, 8, 8, 0.29) 0px -1px 10px 0px, rgba(8, 8, 8, 0.29) 0px 1px 10px 0px;
+  background-color: #fff;
+  box-shadow: 0 -1px 10px 0 rgba(8, 8, 8, .3), 0 1px 10px 0 rgba(8, 8, 8, .3);
 }
 
 .work-div.section {
-  box-shadow: #1d1d1d 0px 1px 10px 0px;
+  box-shadow: 0 1px 10px 0 #1d1d1d;
   -webkit-perspective: 1300px;
   perspective: 1300px;
 }
@@ -125,6 +124,7 @@ strong {
 
 .work-header-text.my-projects {
   margin-top: 0px;
+  margin-bottom: 25px;
   padding-top: 0px;
 }
 
@@ -132,14 +132,14 @@ strong {
   height: auto;
   margin-top: 0px;
   margin-bottom: 1px;
-  background-color: white;
-  box-shadow: rgba(8, 8, 8, 0.29) 0px -1px 10px 0px, rgba(8, 8, 8, 0.29) 1px 1px 10px 0px;
+  background-color: #fff;
+  box-shadow: 0 -1px 10px 0 rgba(8, 8, 8, .3), 1px 1px 10px 0 rgba(8, 8, 8, .3);
 }
 
 .contact-section.contact-class2 {
   margin-top: 125px;
   margin-bottom: 75px;
-  box-shadow: black 0px 1px 10px 0px;
+  box-shadow: 0 1px 10px 0 #000;
 }
 
 .contact-form {
@@ -177,7 +177,7 @@ strong {
   width: 265px;
   height: 143px;
   margin-top: 1px;
-  border-color: rgba(128, 128, 128, 0.26);
+  border-color: hsla(0, 0%, 50%, .26);
   border-radius: 2px;
   background-color: #fafafa;
   line-height: 14px;
@@ -187,7 +187,7 @@ strong {
 
 .contact-message-box:focus {
   border-color: #265b4a;
-  box-shadow: #265b4a 0px 0px 6px 2px;
+  box-shadow: 0 0 6px 2px #265b4a;
 }
 
 .work-container {
@@ -196,7 +196,7 @@ strong {
   padding-top: 80px;
   padding-right: 0px;
   padding-bottom: 80px;
-  background-color: white;
+  background-color: #fff;
   text-align: center;
 }
 
@@ -229,8 +229,7 @@ strong {
   left: 0px;
   bottom: 0px;
   z-index: 40;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
   width: 54%;
   height: auto;
   margin: 275px 100px 225px 0px;
@@ -238,7 +237,7 @@ strong {
   float: right;
   clear: none;
   font-family: Bitter, serif;
-  color: white;
+  color: #fff;
   font-size: 264%;
   line-height: 53px;
   font-style: normal;
@@ -270,14 +269,14 @@ strong {
   margin-top: 50px;
   margin-bottom: 50px;
   float: left;
-  border: 1px solid black;
-  box-shadow: #6d6d6d 2px 2px 6px 0px;
+  border: 1px solid #000;
+  box-shadow: 2px 2px 6px 0 #6d6d6d;
 }
 
 .mass-body {
   margin-top: 0px;
   margin-left: 0px;
-  background-color: white;
+  background-color: #fff;
 }
 
 .section-top-cover {
@@ -323,15 +322,15 @@ strong {
   width: 100%;
   margin-right: 2px;
   clear: both;
-  background-color: white;
-  background-image: -webkit-linear-gradient(white 41%, #ebe9e9);
-  background-image: linear-gradient(white 41%, #ebe9e9);
-  box-shadow: black 0px 0px 25px 0px;
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(270deg, #fff 41%, #ebe9e9);
+  background-image: linear-gradient(180deg, #fff 41%, #ebe9e9);
+  box-shadow: 0 0 25px 0 #000;
 }
 
 .work-section {
-  background-color: white;
-  box-shadow: black 0px 1px 10px 0px;
+  background-color: #fff;
+  box-shadow: 0 1px 10px 0 #000;
 }
 
 .footer {
@@ -401,7 +400,7 @@ strong {
   margin-bottom: 10px;
   font-family: Roboto, sans-serif;
   color: #333;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 300;
   text-decoration: underline;
 }
@@ -416,7 +415,7 @@ strong {
 }
 
 .work-text-link {
-  color: #585858;
+  color: #333;
 }
 
 .work-text-link:hover {
@@ -445,7 +444,7 @@ strong {
 
 .text-feild {
   width: 267px;
-  border-color: rgba(128, 128, 128, 0.26);
+  border-color: hsla(0, 0%, 50%, .26);
   border-radius: 2px;
   background-color: #fafafa;
   -webkit-transition: opacity 200ms ease;
@@ -456,7 +455,7 @@ strong {
 
 .text-feild:focus {
   border-color: #265b4a;
-  box-shadow: #265b4a 0px 0px 5px 1px;
+  box-shadow: 0 0 5px 1px #265b4a;
 }
 
 .submit-button {
@@ -532,15 +531,15 @@ strong {
   margin-top: 100px;
   margin-bottom: 50px;
   border: 1px solid #4e4e4e;
-  box-shadow: #303030 1px 1px 3px 0px;
+  box-shadow: 1px 1px 3px 0 #303030;
 }
 
 .top-image-section {
   height: 650px;
   min-height: 440px;
-  background-color: black;
-  background-image: -webkit-radial-gradient(31% 53% circle, transparent 16%, rgba(0, 0, 0, 0.68) 49%, rgba(0, 0, 0, 0.84) 75%, rgba(0, 0, 0, 0.99) 99%), url('../images/MayimEventPicCover.jpg');
-  background-image: radial-gradient(circle at 31% 53%, transparent 16%, rgba(0, 0, 0, 0.68) 49%, rgba(0, 0, 0, 0.84) 75%, rgba(0, 0, 0, 0.99) 99%), url('../images/MayimEventPicCover.jpg');
+  background-color: #000;
+  background-image: -webkit-radial-gradient(circle farthest-corner at 31% 53%, transparent 16%, rgba(0, 0, 0, .68) 49%, rgba(0, 0, 0, .84) 75%, rgba(0, 0, 0, .99) 99%), url('../images/MayimEventPicCover.jpg');
+  background-image: radial-gradient(circle farthest-corner at 31% 53%, transparent 16%, rgba(0, 0, 0, .68) 49%, rgba(0, 0, 0, .84) 75%, rgba(0, 0, 0, .99) 99%), url('../images/MayimEventPicCover.jpg');
   background-position: 0px 0px, 0px 50px;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
@@ -553,11 +552,8 @@ strong {
 
 .top-image-section._4-year {
   height: auto;
-  background-color: white;
+  background-color: #fff;
   background-image: none;
-  background-position: 0px 50px;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .top-image-section.mayim {
@@ -566,7 +562,7 @@ strong {
 
 .top-image-section.codesketch {
   height: auto;
-  background-color: white;
+  background-color: #fff;
   background-image: none;
 }
 
@@ -766,7 +762,7 @@ strong {
 .back-to-projects-button {
   border: 2px solid #265b4a;
   border-radius: 2px;
-  background-color: white;
+  background-color: #fff;
   font-family: Roboto, sans-serif;
   color: #265b4a;
   font-weight: 500;
@@ -1039,8 +1035,7 @@ strong {
 }
 
 .eventoverview-paragraph.about-me-text {
-  overflow-x: visible;
-  overflow-y: visible;
+  overflow: visible;
   max-height: 302px;
 }
 
@@ -1086,6 +1081,13 @@ strong {
   background-repeat: no-repeat;
 }
 
+.slide3.fanny-slide1 {
+  background-image: url('../images/IMG_5231.jpg');
+  background-position: 0px 0px;
+  background-size: contain;
+  background-repeat: repeat;
+}
+
 .slide4 {
   background-image: url('../images/MayimEventPic3.jpg');
   background-position: 0px 0px;
@@ -1116,10 +1118,10 @@ strong {
   border: 1px solid #4ba689;
   border-radius: 4px;
   background-color: #265b4a;
-  box-shadow: #4ba689 0px 3px 0px 0px;
+  box-shadow: 0 3px 0 0 #4ba689;
   -webkit-transition: background-color 200ms ease;
   transition: background-color 200ms ease;
-  color: white;
+  color: #fff;
 }
 
 .flat-button:hover {
@@ -1146,8 +1148,8 @@ strong {
   margin: 0px auto;
   border-width: 1px;
   border-color: #4ba689;
-  background-color: white;
-  box-shadow: #4ba689 0px 3px 0px 0px;
+  background-color: #fff;
+  box-shadow: 0 3px 0 0 #4ba689;
   color: #265c4a;
 }
 
@@ -1170,7 +1172,7 @@ strong {
 }
 
 .section-white {
-  background-color: white;
+  background-color: #fff;
 }
 
 .project-text-link {
@@ -1205,8 +1207,7 @@ strong {
   width: 230px;
   height: 260px;
   min-width: 230px;
-  margin-right: 10px;
-  margin-left: 10px;
+  margin: 10px 10px 30px;
 }
 
 .ucsd-logo {
@@ -1278,7 +1279,7 @@ strong {
   margin-top: 0px;
   margin-bottom: 0px;
   font-family: Roboto, sans-serif;
-  color: white;
+  color: #fff;
   font-size: 15px;
   text-align: left;
 }
@@ -1295,6 +1296,12 @@ strong {
 
 .form-wrapper.contact-form {
   padding-top: 0px;
+}
+
+.arduino-slide4 {
+  background-image: url('../images/IMG_5292.jpg');
+  background-position: 0px 0px;
+  background-size: cover;
 }
 
 html.w-mod-js *[data-ix="fade-in"] {
@@ -1473,8 +1480,7 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
   }
   .interestslikes {
     display: none;
-    overflow-x: visible;
-    overflow-y: visible;
+    overflow: visible;
     width: 350px;
   }
   .pic-div {
@@ -1546,7 +1552,7 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
     line-height: 20px;
   }
   .caption {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 13px;
   }
   .entry-photo {
@@ -1666,7 +1672,7 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
     border-top: 1px solid #d1d1d1;
     border-bottom: 1px solid #d1d1d1;
     background-color: #265c4a;
-    color: white;
+    color: #fff;
     font-size: 17px;
     line-height: 18px;
   }
@@ -1676,7 +1682,7 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
     border-style: solid solid none;
     border-width: 1px 1px 0px;
     border-color: #d1d1d1;
-    color: white;
+    color: #fff;
     font-size: 17px;
   }
   .background {
@@ -1746,7 +1752,7 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
     padding: 5px;
   }
   .navbar {
-    box-shadow: black 0px 0px 25px 0px;
+    box-shadow: 0 0 25px 0 #000;
   }
   .footer {
     padding-left: 25px;
@@ -1884,7 +1890,7 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
     color: #265c4a;
   }
   .nav-menu {
-    box-shadow: black 0px 1px 20px 0px;
+    box-shadow: 0 1px 20px 0 #000;
   }
   .photos-slider {
     display: inline-block;
@@ -2088,6 +2094,7 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
   }
   .caption {
     width: 270px;
+    font-size: 11px;
   }
   .entry-photo {
     width: 250px;
