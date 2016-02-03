@@ -1474,6 +1474,9 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
   .resume-link.news-link {
     font-size: 13px;
   }
+  .resume-link.resume-link2 {
+    font-size: 15px;
+  }
   .challenge {
     font-size: 14px;
     line-height: 21px;
@@ -1732,7 +1735,7 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
     padding-left: 100px;
   }
   .about-me-text {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 22px;
   }
   .hi {
@@ -1769,6 +1772,10 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
   }
   .resume-link.news-link {
     display: none;
+  }
+  .resume-link.resume-link2 {
+    display: inline;
+    font-size: 13px;
   }
   .challenge {
     display: inline-block;
