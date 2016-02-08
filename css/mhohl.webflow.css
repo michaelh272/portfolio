@@ -2396,8 +2396,7 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
   .about.about-container {
     height: auto;
     margin-bottom: 50px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 30px 20px;
     text-align: center;
   }
   .about.contact-section {
@@ -2428,9 +2427,9 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
     text-align: center;
   }
   .about-me-text {
+    width: 275px;
     height: auto;
-    max-height: auto;
-    max-width: 651px;
+    max-width: 300px;
     margin-bottom: 20px;
     font-size: 14px;
     text-align: left;
