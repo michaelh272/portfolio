@@ -1641,11 +1641,14 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
     height: auto;
   }
   .about.contact-section {
-    height: 375px;
+    height: auto;
   }
   .about-me-text {
     font-size: 16px;
     line-height: 28px;
+  }
+  .hi {
+    text-align: left;
   }
   .quote {
     width: 45%;
@@ -1684,6 +1687,7 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
     height: 200px;
     min-height: auto;
     min-width: auto;
+    margin-top: 65px;
     margin-left: 20px;
   }
   .message-box.text-feild {
@@ -1957,13 +1961,14 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
     height: 375px;
   }
   .about.about-container {
-    height: 300px;
+    height: auto;
     margin-bottom: 75px;
     padding-top: 50px;
     padding-bottom: 50px;
+    text-align: center;
   }
   .about.contact-section {
-    height: 300px;
+    height: auto;
   }
   .work-div.section {
     margin-top: 75px;
@@ -2003,10 +2008,13 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
     margin-top: 0px;
     font-size: 14px;
     line-height: 22px;
+    text-align: left;
   }
   .hi {
+    display: block;
     margin-bottom: 0px;
     font-size: 30px;
+    text-align: center;
   }
   .quote {
     margin-top: 175px;
@@ -2070,9 +2078,12 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
     font-size: 30px;
   }
   .pic-div {
+    display: inline-block;
     width: 175px;
     height: 175px;
     margin-top: 10px;
+    margin-bottom: 10px;
+    float: none;
   }
   .message-box.text-feild {
     font-size: 12px;
