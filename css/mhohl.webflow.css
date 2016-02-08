@@ -2005,7 +2005,12 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
     padding-left: 100px;
   }
   .about-me-text {
+    display: block;
+    width: 450px;
+    max-width: auto;
     margin-top: 0px;
+    margin-right: auto;
+    margin-left: auto;
     font-size: 14px;
     line-height: 22px;
     text-align: left;
