@@ -1895,6 +1895,27 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
   .footer-copywrite {
     font-size: 10px;
   }
+  .top-header-container {
+    padding-top: 150px;
+  }
+  .lets {
+    margin-bottom: 15px;
+  }
+  .create {
+    font-size: 150px;
+    line-height: 150px;
+  }
+  .create.c {
+    font-size: 150px;
+    line-height: 150px;
+  }
+  .create.r {
+    font-size: 150px;
+    line-height: 150px;
+  }
+  .create-div {
+    font-size: 0px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1918,7 +1939,7 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
     float: none;
     border-top: 1px solid #d1d1d1;
     border-bottom: 1px solid #d1d1d1;
-    background-color: #265c4a;
+    background-color: #00529d;
     color: #fff;
     font-size: 17px;
     line-height: 18px;
@@ -2165,14 +2186,14 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
     padding-top: 0px;
   }
   .menu-but.w--open {
-    background-color: #265c4a;
+    background-color: #00529d;
   }
   .hamburger-icon {
     width: auto;
-    color: #4ba689;
+    color: #528abd;
   }
   .hamburger-icon:hover {
-    color: #265c4a;
+    color: #00529d;
   }
   .nav-menu {
     box-shadow: 0 1px 20px 0 #000;
@@ -2310,6 +2331,32 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
   .last-cs-pic {
     display: none;
   }
+  .top-header-container {
+    padding-top: 125px;
+  }
+  .lets {
+    margin-bottom: 5px;
+    font-size: 21px;
+    line-height: 21px;
+  }
+  .lets.something-together {
+    margin-top: 0px;
+  }
+  .create {
+    font-size: 100px;
+    line-height: 100px;
+  }
+  .create.a {
+    margin-left: 2px;
+  }
+  .create.c {
+    font-size: 100px;
+    line-height: 100px;
+  }
+  .create.r {
+    font-size: 100px;
+    line-height: 100px;
+  }
 }
 
 @media (max-width: 479px) {
@@ -2322,7 +2369,7 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
   }
   .background {
     position: relative;
-    height: 500px;
+    height: 400px;
     background-image: -webkit-linear-gradient(270deg, hsla(0, 0%, 8%, .5), hsla(0, 0%, 8%, .5)), url('../images/PostIts_background.png');
     background-image: linear-gradient(180deg, hsla(0, 0%, 8%, .5), hsla(0, 0%, 8%, .5)), url('../images/PostIts_background.png');
     background-position: 0px 0px, 0px 0px;
@@ -2366,7 +2413,7 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
   }
   .about-me-text {
     height: auto;
-    max-height: 200px;
+    max-height: auto;
     max-width: 651px;
     margin-bottom: 20px;
     font-size: 14px;
@@ -2583,6 +2630,30 @@ html.w-mod-js *[data-ix="pop-downwards-delay1-load"] {
   }
   .footer-slashes.single-slash.youtube-slash {
     display: none;
+  }
+  .top-header-container {
+    padding-top: 150px;
+  }
+  .lets {
+    margin-bottom: -5px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .lets.something-together {
+    margin-top: -10px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .create {
+    font-size: 75px;
+  }
+  .create.c {
+    font-size: 75px;
+    line-height: 75px;
+  }
+  .create.r {
+    font-size: 75px;
+    line-height: 75px;
   }
 }
 
